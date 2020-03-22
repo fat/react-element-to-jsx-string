@@ -16,7 +16,7 @@ const defaultFunctionValue = inlineFunction;
 export default (fn: Function, options: Options): string => {
   const { functionValue = defaultFunctionValue, showFunctions } = options;
   if (!showFunctions && functionValue === defaultFunctionValue) {
-    return functionValue(noRefCheck);
+    return functionValue('...');
   }
 
   return functionValue(fn);
